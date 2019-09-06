@@ -1,0 +1,16 @@
+import example.* 
+
+test "juan puede logearse" {
+
+	assert.that(login.validarAcceso("Juan",1234))
+
+}
+test "juan sube foto y esta en el muro"{
+	juan.subirfoto("paisaje")
+	assert.that(muro.tieneFoto("paisaje"))
+}
+
+test "pedro sube foto y esta en el muro"{
+	pedro.subirfoto("paisaje")
+	assert.notThat(muro.tieneFoto("carita"))
+}
